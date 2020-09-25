@@ -4,6 +4,12 @@ class ControllerCommonHeader extends Controller {
 		// Analytics
 		$this->load->model('setting/extension');
 
+		if (isset($this->request->get['route']) && ($this->request->get['route'] == 'common/home' || $this->request->server['REQUEST_URI'] == '/')) {
+			$data['home'] = true;
+		} else {
+			$data['home'] = false;
+		}
+
 		$data['analytics'] = array();
 
 		$analytics = $this->model_setting_extension->getExtensions('analytics');
