@@ -1,52 +1,54 @@
-<footer>
-  <div class="container">
-    <div class="row">
-      {% if informations %}
-      <div class="col-sm-3">
-        <h5>{{ text_information }}</h5>
-        <ul class="list-unstyled">
-         {% for information in informations %}
-          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
-          {% endfor %}
-        </ul>
+  <footer class="container">
+    <div class="d-flex">
+      <div class="foot_row">
+        <b>Информация</b>
+        <a href="#">О компании</a>
+        <a href="#">Новости</a>
+        <a href="#">Корпоративным клиентам</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Политика безопасности</a>
       </div>
-      {% endif %}
-      <div class="col-sm-3">
-        <h5>{{ text_service }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
-          <li><a href="{{ return }}">{{ text_return }}</a></li>
-          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
-        </ul>
+      <div class="foot_row">
+        <b>Покупателям</b>
+        <a href="#">Каталог товара</a>
+        <a href="#">Доставка</a>
+        <a href="#">Самовывоз</a>
+        <a href="#">Оплата заказа</a>
+        <a href="#">Техно Бонус</a>
+        <a href="#">Акции</a>
       </div>
-      <div class="col-sm-3">
-        <h5>{{ text_extra }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
-          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
-          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
-          <li><a href="{{ special }}">{{ text_special }}</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-3">
-        <h5>{{ text_account }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ account }}">{{ text_account }}</a></li>
-          <li><a href="{{ order }}">{{ text_order }}</a></li>
-          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
-        </ul>
+      <div class="foot_row">
+        <b>Поддержка</b>
+        <a href="#">Пожаловаться директору</a>
+        <a href="#">Гарантия и возвраты</a>
+        <a href="#">Карта сайта</a>
       </div>
     </div>
-    <hr>
-    <p>{{ powered }}</p>
-  </div>
-</footer>
-{% for script in scripts %}
-<script src="{{ script }}" type="text/javascript"></script>
-{% endfor %}
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
-</body></html>
+  </footer>
+  <section class="container contacts">
+    <div class="head_top">
+      <div class="phone"><a class="non_dec" href="tel:79495756983">+7 949 575 69 83</a></div>
+      <div class="mail"><a class="non_dec" href="mailto:support@gmail.com">support@gmail.com</a></div>
+    </div>
+  </section>
+  <div class="hover_back"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="{{ theme_url }}/assets/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+jQuery(function($) {
+    $('.nav-item').hover(function(event) {
+        if (event.type == 'mouseenter') {
+          $('body').addClass(this.id + " big_menu_hovered");
+        }
+        else {
+          $('body').removeClass(this.id + " big_menu_hovered");
+        }
+    })
+});
+
+</script>
+</html>

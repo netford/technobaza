@@ -15,7 +15,7 @@ class ControllerCommonFooter extends Controller {
 				);
 			}
 		}
-
+		$data['theme_url'] = 'catalog/view/theme/technobaza';
 		$data['contact'] = $this->url->link('information/contact');
 		$data['return'] = $this->url->link('account/return/add', '', true);
 		$data['sitemap'] = $this->url->link('information/sitemap');
@@ -57,7 +57,7 @@ class ControllerCommonFooter extends Controller {
 		}
 
 		$data['scripts'] = $this->document->getScripts('footer');
-		
+
 		return $this->load->view('common/footer', $data);
 	}
 }
