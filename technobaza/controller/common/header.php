@@ -5,9 +5,9 @@ class ControllerCommonHeader extends Controller {
 		$this->load->model('setting/extension');
 
 		if (isset($this->request->get['route']) && ($this->request->get['route'] == 'common/home' || $this->request->server['REQUEST_URI'] == '/')) {
-			$data['home'] = true;
+			$data['is_home'] = true;
 		} else {
-			$data['home'] = false;
+			$data['is_home'] = false;
 		}
 
 		$data['analytics'] = array();

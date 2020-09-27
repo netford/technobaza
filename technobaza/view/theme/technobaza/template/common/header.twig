@@ -26,7 +26,7 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 
-{% if home == false %}
+{% if is_home == false %}
 <link href="{{ theme_url }}/stylesheet/stylesheet.css" rel="stylesheet">
 {% endif %}
 
@@ -73,7 +73,7 @@
       <a href="#">Доставка</a>
       <a href="#">Оплата</a>
       <a href="#">Гарантия / Возврат</a>
-      <a href="#">Контакты</a>
+      <a href=" {{ contact }} ">Контакты</a>
     </div>
 
     <div class="wrap_menu">
